@@ -1,20 +1,32 @@
-#include<stdio.h>
-#include<math.h>
-int main(){
-  int n,i,j,k,num=0,c1=3,c2;
-  scanf("%d",&n);
-  for(i=3;i<=n;i++){
-    k=sqrt(i);
-    for(j=2;j<=k;j++){
-      if(i%j==0)
-      break;
-    }
-    if(j>k){
-      c2=i;
-      if(i-c1==2)
-      num++;
-      c1=i;
-    }
-  }
-  printf("%d",num);
+#include <stdio.h>
+#include <stdlib.h>
+#define max 100000
+typedef struct {
+	int id;
+	int de;
+	int cai;
+} stu;
+int cmp(const void *a,const void *b);
+void printlevel(stu s[],int m);
+int main()
+{
+	int n,l,h,i1,i2,i3,i4,j;
+	stu t ,level1[max],level2[max],level3[max],level4[max];
+	i1=i2=i3=i4=0;
+	scanf("%d %d %d",&n,&l,&h);
+	for(j=0;j<n;j++){
+		scanf("%d %d %d",&t.id,&t.de,&t.cai);
+		if(t.de>=l&&t.cai>=l){
+			if(t.de>=l&&t.cai>=l){
+				if(t.de>=h&&t.cai>=h)
+				level1[i1++]=t;
+				else if(t.de>=h)
+				level2[i2++]=t;
+				else if(t.de>=t.cai)
+				level3[i3++]=t;
+				else
+				level4[i4++]=t;
+			}
+		}
+	}
 }
